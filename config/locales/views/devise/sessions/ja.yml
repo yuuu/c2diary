@@ -1,5 +1,0 @@
-ja:
-  devise:
-    sessions:
-      new:
-        remember_me: ログインを記憶する
