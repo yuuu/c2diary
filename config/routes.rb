@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :imports, only: [:new, :create]
+  resources :exports, only: [:index]
 
   devise_for :users
 end

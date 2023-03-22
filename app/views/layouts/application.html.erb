@@ -19,7 +19,7 @@
         <li><a href="<%= diaries_path %>"><i class="material-icons">book</i><%= t('menu.diaries') %></a></li>
         <li><a href="<%= time_travel_diaries_path %>"><i class="material-icons">card_travel</i><%= t('menu.time_travel') %></a></li>
         <li><a href="<%= new_import_path %>"><i class="material-icons">arrow_upward</i><%= t('menu.csv_import') %></a></li>
-        <li><a href=""><i class="material-icons">arrow_downward</i><%= t('menu.csv_export') %></a></li>
+        <li><a href="<%= exports_path(format: :csv) %>"><i class="material-icons">arrow_downward</i><%= t('menu.csv_export') %></a></li>
         <li class="divider"></li>
         <li><a ref="nofollow" data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">exit_to_app</i><%= t('session.sign_out') %></a></li>
       </ul>
