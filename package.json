@@ -3,5 +3,6 @@
   "private": true,
   "dependencies": {
     "lint": "^0.7.0"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

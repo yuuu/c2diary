@@ -1,0 +1,8 @@
+# fly.toml file generated for c2diary on 2023-03-26T06:14:53+09:00
+
+app = "c2diary"
+primary_region = "nrt"
+
+[[statics]]
+  guest_path = "/rails/public"
+  url_prefix = "/"
