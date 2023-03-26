@@ -35,7 +35,9 @@
               </a>
             </li>
             <% else %>
+            <% if false %>
             <li><a href="<%= new_user_registration_path %>"><%= t('session.sign_up') %></a></li>
+            <% end %>
             <li><a href="<%= new_user_session_path %>"><%= t('session.sign_in') %></a></li>
             <% end %>
           </ul>
@@ -50,7 +52,9 @@
         <li class="divider"></li>
         <li><a ref="nofollow" data-method="delete" href="<%= destroy_user_session_path %>"><i class="material-icons">exit_to_app</i><%= t('session.sign_out') %></a></li>
         <% else %>
+        <% if false %>
         <li><a href="<%= new_user_registration_path %>"><i class="material-icons">person_add</i><%= t('session.sign_up') %></a></li>
+        <% end %>
         <li><a href="<%= new_user_session_path %>"><i class="material-icons">input</i><%= t('session.sign_in') %></a></li>
         <% end %>
       </ul>

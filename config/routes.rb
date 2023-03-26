@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'diaries#index'
 
   get 'pages/about'
   get 'pages/help'
