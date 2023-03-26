@@ -1,7 +1,29 @@
-# fly.toml file generated for c2diary on 2023-03-26T06:14:53+09:00
+# fly.toml file generated for c2diary on 2023-03-26T07:14:40+09:00
 
 app = "c2diary"
+kill_signal = "SIGINT"
+kill_timeout = 5
+mounts = []
 primary_region = "nrt"
+processes = []
+
+[[services]]
+  internal_port = 3000
+  processes = ["app"]
+  protocol = "tcp"
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "connections"
+
+  [[services.ports]]
+    force_https = true
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
 
 [[statics]]
   guest_path = "/rails/public"
